@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEÜ GLIT - Üye Kayıt</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            font-size: 48px;
+            margin-bottom: 15px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border-left: 4px solid #dc2626;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .info-box h3 {
+            color: #991b1b;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .info-box p {
+            color: #7f1d1d;
+            line-height: 1.6;
+        }
+
+        .form-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+            display: block;
+        }
+
+        .footer {
+            background: #f9fafb;
+            padding: 25px;
+            text-align: center;
+            color: #6b7280;
+            font-size: 14px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .footer a {
+            color: #dc2626;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #991b1b;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .logo {
+                font-size: 36px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            iframe {
+                height: 1000px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <div class="logo">🚀</div>
+                <h1>DEÜ Global Liderlik ve İnovasyon Topluluğu</h1>
+                <p class="subtitle">Geleceği Birlikte Şekillendiriyoruz</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="info-box">
+                <h3>✨ Hoş Geldiniz!</h3>
+                <p>
+                    DEÜ GLIT ailesine katılmak için aşağıdaki formu doldurmanız yeterli. 
+                    Liderlik yolculuğunuzda ve inovasyon maceranızda sizinle birlikte olmaktan mutluluk duyacağız!
+                </p>
+            </div>
+
+            <div class="form-container">
+                <!-- Google Forms iframe'i buraya eklenecek -->
+                <!-- Kendi Google Forms linkinizi buraya ekleyin -->
+                <iframe 
+                    src="<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdvMOyOAj-kCJcf_TqgkWPFjurejvfZGEuhFryB2ERLJs83oA/viewform?embedded=true" width="640" height="1598" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>"
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0">
+                    Yükleniyor…
+                </iframe>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 DEÜ GLIT - Tüm hakları saklıdır</p>
+            <p style="margin-top: 8px;">Sorularınız için: <a href="mailto:info@deuglit.com">info@deuglit.com</a></p>
+        </div>
+    </div>
+</body>
+</html>
